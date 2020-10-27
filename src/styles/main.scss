@@ -1,0 +1,70 @@
+// colors
+$primary-shadow: #949699;
+$primary-background: #eeeeee;
+
+//styles
+.hero {
+  background-image: url("../assets/asset1.jpg");
+  background-position: center;
+  background-size: cover;
+  height: 90vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+.hero > h1 {
+  font-family: "Source Sans Pro", sans-serif;
+  color: white;
+}
+.hero > p {
+  color: white;
+  font-size: 20px;
+}
+
+.hero-button {
+  background-color: #1c2b2d8f;
+  backdrop-filter: blur(5px);
+  width: 40%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin-top: 40px;
+  border-radius: 10px;
+  transition: all 0.2s;
+  cursor: pointer;
+}
+.hero-button > p {
+  font-size: 40px;
+  color: white;
+}
+.hero-button:hover {
+  box-shadow: 0 0 2px 3px white;
+}
+
+.login-page {
+  width: fit-content;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: $primary-background;
+  padding: 40px;
+  margin: 40px auto;
+  border-radius: 10px;
+  box-shadow: 0 2px 20px 2px $primary-shadow;
+}
+
+.register-page {
+  width: fit-content;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: $primary-background;
+  padding: 40px;
+  margin: 30px auto;
+  border-radius: 10px;
+  box-shadow: 0 2px 20px 2px $primary-shadow;
+}
