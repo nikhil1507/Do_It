@@ -2,7 +2,7 @@
 
 # Do_It
 
-A Todo app that supports complete authentication where users can view and update their todo tasks
+A Dummy Todo app that showing the basic frontend idea where users can view and update their todo tasks
 
 In the project directory, you can run:
 
