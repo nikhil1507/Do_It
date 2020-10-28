@@ -4,12 +4,15 @@ import "./index.css";
 import App from "./App";
 import "bootstrap/dist/css/bootstrap.css";
 import "font-awesome/css/font-awesome.css";
+import { BrowserRouter } from "react-router-dom";
 import reportWebVitals from "./reportWebVitals";
 
 ReactDOM.render(
-  <React.StrictMode>
-    <App />
-  </React.StrictMode>,
+  <BrowserRouter>
+    <React.StrictMode>
+      <App />
+    </React.StrictMode>
+  </BrowserRouter>,
   document.getElementById("root")
 );
 

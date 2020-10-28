@@ -1,11 +1,12 @@
 import React from "react";
+import { NavLink, Link } from "react-router-dom";
 import "../styles/main.scss";
 
 export default function Navbar() {
   const links = [
-    { id: 1, title: "Home" },
-    { id: 2, title: "Login" },
-    { id: 3, title: "Register" },
+    { id: 1, title: "Home", link: "/" },
+    { id: 2, title: "Login", link: "/login" },
+    { id: 3, title: "Register", link: "/register" },
   ];
   return (
     <div className="navbar navbar-expand-lg bg-light navbar-light">
@@ -23,9 +24,9 @@ export default function Navbar() {
       <ul className="navbar-nav">
         {links.map((i) => (
           <li key={i.id} className="nav-item">
-            <a href="#" className="nav-link">
+            <NavLink className=" nav-link" to={i.link}>
               {i.title}
-            </a>
+            </NavLink>
           </li>
         ))}
       </ul>

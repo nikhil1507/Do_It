@@ -14,12 +14,14 @@ $primary-background: #eeeeee;
   flex-direction: column;
 }
 .hero > h1 {
+  animation: moveleft 500ms ease;
   font-family: "Source Sans Pro", sans-serif;
   color: white;
 }
 .hero > p {
   color: white;
   font-size: 20px;
+  animation: moveright 500ms ease;
 }
 
 .hero-button {
@@ -33,6 +35,7 @@ $primary-background: #eeeeee;
   margin-top: 40px;
   border-radius: 10px;
   transition: all 0.2s;
+  animation: rise 700ms ease;
   cursor: pointer;
 }
 .hero-button > p {
@@ -44,6 +47,7 @@ $primary-background: #eeeeee;
 }
 
 .login-page {
+  animation: appear 500ms ease;
   width: fit-content;
   display: flex;
   flex-direction: column;
@@ -57,6 +61,7 @@ $primary-background: #eeeeee;
 }
 
 .register-page {
+  animation: appear 500ms ease;
   width: fit-content;
   display: flex;
   flex-direction: column;
@@ -67,4 +72,91 @@ $primary-background: #eeeeee;
   margin: 30px auto;
   border-radius: 10px;
   box-shadow: 0 2px 20px 2px $primary-shadow;
+}
+.todo-user {
+  background-image: url("../assets/asset1.jpg");
+  background-position: center;
+  background-size: cover;
+  height: 90vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.todo-container {
+  width: 50%;
+  height: 80vh;
+  background-color: #eeeeee94;
+  backdrop-filter: blur(10px);
+  border-radius: 10px;
+  padding: 15px 40px;
+  overflow-x: hidden;
+  overflow-y: auto;
+}
+
+::-webkit-scrollbar {
+  width: 5px;
+}
+::-webkit-scrollbar-track {
+  background-color: $primary-shadow;
+}
+::-webkit-scrollbar-thumb {
+  background-color: $primary-background;
+  border-radius: 10px;
+}
+
+.task-container {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  background-color: rgba(238, 238, 238, 0.158);
+  padding: 5px 10px;
+  margin-top: 10px;
+  backdrop-filter: blur(4px);
+  border-radius: 10px;
+}
+.task-container > h4 {
+  display: flex;
+  flex: 1;
+}
+
+@keyframes appear {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+@keyframes rise {
+  0% {
+    opacity: 0;
+    transform: translate(0, 40px);
+  }
+  100% {
+    opacity: 1;
+    transform: translate(0, 0);
+  }
+}
+
+@keyframes moveleft {
+  0% {
+    opacity: 0;
+    transform: translate(40px, 0);
+  }
+  100% {
+    opacity: 1;
+    transform: translate(0, 0);
+  }
+}
+
+@keyframes moveright {
+  0% {
+    opacity: 0;
+    transform: translate(-40px, 0);
+  }
+  100% {
+    opacity: 1;
+    transform: translate(0, 0);
+  }
 }
