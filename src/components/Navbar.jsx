@@ -7,6 +7,7 @@ export default function Navbar() {
     { id: 1, title: "Home", link: "/" },
     { id: 2, title: "Login", link: "/login" },
     { id: 3, title: "Register", link: "/register" },
+    { id: 4, title: "Todo", link: "/add" },
   ];
   return (
     <div className="navbar navbar-expand-lg bg-light navbar-light">
@@ -20,16 +21,34 @@ export default function Navbar() {
             }}
           ></i>
         </a>
+        <button
+          style={{ position: "absolute", right: 0 }}
+          class="navbar-toggler"
+          type="button"
+          data-toggle="collapse"
+          data-target="#navbarSupportedContent"
+          aria-controls="navbarSupportedContent"
+          aria-expanded="false"
+          aria-label="Toggle navigation"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
       </div>
-      <ul className="navbar-nav">
-        {links.map((i) => (
-          <li key={i.id} className="nav-item">
-            <NavLink className=" nav-link" to={i.link}>
-              {i.title}
-            </NavLink>
-          </li>
-        ))}
-      </ul>
+
+      <div
+        style={{ position: "absolute", right: 0 }}
+        className="navbar-collapse collapse"
+      >
+        <ul className="navbar-nav">
+          {links.map((i) => (
+            <li key={i.id} className="nav-item">
+              <NavLink className=" nav-link" to={i.link}>
+                {i.title}
+              </NavLink>
+            </li>
+          ))}
+        </ul>
+      </div>
     </div>
   );
 }

@@ -4,6 +4,7 @@ import Navbar from "../src/components/Navbar";
 import LandingPage from "./components/Pages/LandingPage";
 import Login from "./components/Pages/Login";
 import Register from "./components/Pages/Register";
+import Todo from "./components/Pages/Todo";
 import "../src/styles/main.scss";
 
 function App() {
@@ -13,6 +14,7 @@ function App() {
       <Switch>
         <Route path="/login" component={Login} />
         <Route path="/register" component={Register} />
+        <Route path="/add" component={Todo} />
         <Route exact path="/" component={LandingPage} />
       </Switch>
     </Fragment>
